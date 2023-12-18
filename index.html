@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kozjansko Geekališče</title>
+    <style>
+      html {
+        box-sizing: border-box;
+        font-size: 16px;
+        background-color: #f9fbfd;
+        font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono",
+          "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace",
+          "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New",
+          monospace;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
+      body,
+      pre {
+        margin: 0;
+        padding: 0;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .container {
+        max-width: 480px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .logo {
+        color: #1f3b82;
+        font-size: 0.75rem;
+        display: flex;
+        justify-content: center;
+        margin: 3rem 0;
+        font-weight: bold;
+      }
+
+      .next-meet {
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <pre>
+              .:~!?JYYY55YYYJ?!~:.
+           ^!JY5PPPPPPPPPPPPPPPP5YJ7^.
+        :7YPPPPPPPPP55555555PPPPPPPPPY?^
+      ^JPP5?^:^^^^^7P555555P?~?J5PPP5PPPY~
+    :JPPPJ~^:      !P55555P5:   .~?5PP5PPPJ^
+   ~5P555P57.  .   7P55555555Y?!:  .!YPP55PP!
+  !PP55PP?.  ^JJ  :JP5555555PPPP5J^  .7PP55PP?
+ ~PP55PP7  .7PPJ^?5P555555555555PPP?.  ~PPPPPP!
+.5P555P?  .JPP55PPP555555555555555PPY.  !PJ7PP5:
+!P555P5.  7P555PP555555555555555P5!?5?  .!  YPP7
+?P555PJ   YP555555555555555555555P!  :      JPPY
+?P555PJ   YP555555555555555555555P5!:     :YP5PY
+!P555P5::^JP5555555555555555555555PP5Y7^.!5P55P7
+.5P555P55PP555555PP55555555555555555PPPP5PP55P5:
+ ~PP555PP5555PPPPPPPPPP555555555PPP55555PP55PP!
+  7PP555555PPP5J!^:~!?5P5555PPPP5JYPP555555PP?
+   !5P5555P5!:.   .~?YPPPPPP5YJ!:  !5P5555PP7
+    :JPPP55P?      :^~~~!~~^.   .^?Y5555PPY^
+      ~JPPPPPJ.   ^^:......:^~7J5PPP5PPPY~
+        ^7YPPPY!^:^YP5555555PPPPPPPPP5?^
+          .^!J5PPP55PPPPPPPPPPPP55J7^.
+              .:~7?JYY5555YYJ?7~:.</pre
+        >
+      </div>
+      <div class="description">
+        <p>Kozjansko geekališče so redna mesečna srečanja programerjev in drugih
+        IT delavcev iz Kozjanskega in Obsotelja.</p>
+        <p>Že od jeseni 2021 se vsak prvi petek v mesecu ob 19.30 dobimo v
+        <a href="//mladinskislatna.si">MC Slatna</a>, izmenjujemo izkušnje v
+        obliki krajših predavanj in ob pivu debatiramo o službi.</p>
+        <p>Če si zainteresiran_a, imaš tri možnosti:
+          <ol>
+            <li>Pridruži se <a href="https://discord.gg/yqQCrp2Vac">Discord strežniku</a></li>
+            <li>Pošlji <a href="mailto:mato@zgajner.com">email</a></li>
+            <li>Kar pridi na naslednje srečanje</li>
+          </ol>
+        </p>
+      </div>
+    </div>
+    <script>
+      function findNextFirstFriday(date) {
+        const daysToNextFriday = (5 - date.getDay() + 7) % 7
+        date.setDate(date.getDate() + daysToNextFriday)
+
+        while (date.getDate() > 7) {
+          date.setDate(date.getDate() + 7)
+        }
+
+        return date.toLocaleDateString('sl-SI')
+      }
+
+      const nextMeetDate = findNextFirstFriday(new Date())
+      const nextMeetElement = document.createElement('p')
+      nextMeetElement.innerHTML = `
+        Se vidimo <b>${nextMeetDate}</b> ob <b>19.30</b>!
+      `
+      nextMeetElement.className = 'next-meet'
+      document.querySelector('.description').appendChild(nextMeetElement)
+    </script>
+  </body>
+</html>
