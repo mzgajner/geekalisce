@@ -90,13 +90,29 @@
           <ol>
             <li>Pridruži se <a href="https://discord.gg/yqQCrp2Vac">Discord strežniku</a></li>
             <li>Pošlji <a href="mailto:mato@zgajner.com">email</a></li>
-            <li>Kar pridi na naslednje srečanje</li>
+            <li>Kar pridi ¯\_(ツ)_/¯</li>
           </ol>
         </p>
       </div>
+      <p class="next-meet"></p>
+      <p>Posnetki preteklih srečanj:
+        <ul>
+          <li>
+            <a
+              href="https://www.youtube.com/watch?v=qfFQCz3w5tg"
+            >12. 1. 2024 - Zakaj bi uporabljal Deno</a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/watch?v=Jwa15wNwg2E"
+            >1. 12. 2023 - Uvod v Kubernetes</a>
+          </li>
+        </ul>
+      </p>
     </div>
     <script>
-      function findNextFirstFriday(date) {
+      function findNextFirstFriday() {
+        const date = new Date()
         const daysToNextFriday = (5 - date.getDay() + 7) % 7
         date.setDate(date.getDate() + daysToNextFriday)
 
@@ -107,13 +123,9 @@
         return date.toLocaleDateString('sl-SI')
       }
 
-      const nextMeetDate = findNextFirstFriday(new Date())
-      const nextMeetElement = document.createElement('p')
-      nextMeetElement.innerHTML = `
-        Se vidimo <b>${nextMeetDate}</b> ob <b>19.30</b>!
-      `
-      nextMeetElement.className = 'next-meet'
-      document.querySelector('.description').appendChild(nextMeetElement)
+      const nextMeetElement = document.querySelector('p.next-meet')
+      nextMeetElement.innerHTML =
+        `Naslednjič se dobimo <b>${findNextFirstFriday()}</b> ob <b>19.30</b>`
     </script>
   </body>
 </html>
