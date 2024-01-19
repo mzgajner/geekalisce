@@ -49,6 +49,10 @@
 
       ul, ol { line-height: 1.5; }
       ul li::marker { content: "-  " }
+
+      .recordings {
+        margin-bottom: 3rem;
+      }
     </style>
   </head>
   <body>
@@ -96,19 +100,19 @@
       </div>
       <p>
         Posnetki preteklih srečanj:
-        <ul>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=qfFQCz3w5tg"
-            >12. 1. 2024 - Zakaj bi uporabljal Deno</a>
-          </li>
-          <li>
-            <a
-              href="https://www.youtube.com/watch?v=Jwa15wNwg2E"
-            >1. 12. 2023 - Uvod v Kubernetes</a>
-          </li>
-        </ul>
       </p>
+      <ul class="recordings">
+        <li>
+          <a
+            href="https://www.youtube.com/watch?v=qfFQCz3w5tg"
+          >12. 1. 2024 - Zakaj bi uporabljal Deno</a>
+        </li>
+        <li>
+          <a
+            href="https://www.youtube.com/watch?v=Jwa15wNwg2E"
+          >1. 12. 2023 - Uvod v Kubernetes</a>
+        </li>
+      </ul>
     </div>
     <script>
       function findNextFirstFriday() {
