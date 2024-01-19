@@ -47,9 +47,8 @@
         font-weight: bold;
       }
 
-      .next-meet {
-        margin-top: 2rem;
-      }
+      ul, ol { line-height: 1.5; }
+      ul li::marker { content: "-  " }
     </style>
   </head>
   <body>
@@ -81,6 +80,7 @@
         >
       </div>
       <div class="description">
+        <marquee id="next-meet"></marquee>
         <p>Kozjansko geekališče so redna mesečna srečanja programerjev in drugih
         IT delavcev iz Kozjanskega in Obsotelja.</p>
         <p>Že od jeseni 2021 se vsak prvi petek v mesecu ob 19.30 dobimo v
@@ -94,8 +94,8 @@
           </ol>
         </p>
       </div>
-      <p class="next-meet"></p>
-      <p>Posnetki preteklih srečanj:
+      <p>
+        Posnetki preteklih srečanj:
         <ul>
           <li>
             <a
@@ -123,9 +123,9 @@
         return date.toLocaleDateString('sl-SI')
       }
 
-      const nextMeetElement = document.querySelector('p.next-meet')
+      const nextMeetElement = document.querySelector('#next-meet')
       nextMeetElement.innerHTML =
-        `Naslednjič se dobimo <b>${findNextFirstFriday()}</b> ob <b>19.30</b>`
+        `Naslednjič se dobimo <b>${findNextFirstFriday()}</b> ob <b>19.30</b>!`
     </script>
   </body>
 </html>
