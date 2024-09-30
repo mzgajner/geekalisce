@@ -135,6 +135,8 @@
       </ul>
     </div>
     <script>
+      const NEXT_MEET_OVERRIDE_DATE = new Date('2024-10-11')
+
       function findNextFirstFriday() {
         const date = new Date()
         const daysToNextFriday = (5 - date.getDay() + 7) % 7
@@ -144,12 +146,22 @@
           date.setDate(date.getDate() + 7)
         }
 
-        return date.toLocaleDateString('sl-SI')
+        return date
+      }
+
+      function getNextMeetDate() {
+        let nextMeetDate = findNextFirstFriday()
+
+        if (NEXT_MEET_OVERRIDE_DATE > nextMeetDate) {
+          nextMeetDate = NEXT_MEET_OVERRIDE_DATE
+        }
+
+        return nextMeetDate.toLocaleDateString('sl-SI')
       }
 
       const nextMeetElement = document.querySelector('#next-meet')
       nextMeetElement.innerHTML =
-        `Naslednjič se dobimo <b>${findNextFirstFriday()}</b> ob <b>19.30</b>!`
+        `Naslednjič se dobimo <b>${getNextMeetDate()}</b> ob <b>19.30</b>!`
     </script>
   </body>
 </html>
