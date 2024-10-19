@@ -1,68 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kozjansko Geekališče</title>
-    <style>
-      html {
-        box-sizing: border-box;
-        font-size: 16px;
-        background-color: #f9fbfd;
-        font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono",
-          "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace",
-          "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New",
-          monospace;
-      }
 
-      *,
-      *:before,
-      *:after {
-        box-sizing: inherit;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kozjansko Geekališče</title>
+  <style>
+    html {
+      box-sizing: border-box;
+      font-size: 16px;
+      background-color: #f9fbfd;
+      font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono",
+        "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace",
+        "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New",
+        monospace;
+    }
 
-      body,
-      pre {
-        margin: 0;
-        padding: 0;
-      }
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
 
-      img {
-        max-width: 100%;
-        height: auto;
-      }
+    body,
+    pre {
+      margin: 0;
+      padding: 0;
+    }
 
-      .container {
-        max-width: 480px;
-        margin: 0 auto;
-        padding: 0 2rem;
-      }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
 
-      .logo {
-        color: #3e599c;
-        font-size: 0.75rem;
-        display: flex;
-        justify-content: center;
-        margin: 3rem 0;
-        font-weight: bold;
-      }
+    .container {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
 
-      ul, ol { line-height: 1.5; }
-      ul li::marker { content: "-  " }
+    .logo {
+      color: #3e599c;
+      font-size: 0.75rem;
+      display: flex;
+      justify-content: center;
+      margin: 3rem 0;
+      font-weight: bold;
+    }
 
-      .recordings {
-        margin-bottom: 3rem;
-      }
+    ul,
+    ol {
+      line-height: 1.5;
+    }
 
-      li {
-        margin-bottom: 0.5rem;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="logo">
-        <pre>
+    ul li::marker {
+      content: "-  "
+    }
+
+    .recordings {
+      margin-bottom: 3rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="logo">
+      <pre>
               .:~!?JYYY55YYYJ?!~:.
            ^!JY5PPPPPPPPPPPPPPPP5YJ7^.
         :7YPPPPPPPPP55555555PPPPPPPPPY?^
@@ -84,84 +92,84 @@
       ~JPPPPPJ.   ^^:......:^~7J5PPP5PPPY~
         ^7YPPPY!^:^YP5555555PPPPPPPPP5?^
           .^!J5PPP55PPPPPPPPPPPP55J7^.
-              .:~7?JYY5555YYJ?7~:.</pre
-        >
-      </div>
-      <div class="description">
-        <marquee id="next-meet"></marquee>
-        <p>Kozjansko geekališče so redna mesečna srečanja programerjev in drugih
-        IT delavcev iz Kozjanskega in Obsotelja.</p>
-        <p>Že od jeseni 2021 se vsak prvi petek v mesecu ob 19.30 dobimo v
-        <a href="//mladinskislatna.si">MC Slatna</a>, izmenjujemo izkušnje v
-        obliki krajših predavanj in ob pivu debatiramo o službi.</p>
-        <p>Če si zainteresiran_a, imaš tri možnosti:
-          <ol>
-            <li>Pridruži se <a href="https://discord.gg/yqQCrp2Vac">Discord strežniku</a></li>
-            <li>Pošlji <a href="mailto:mato@zgajner.com">email</a></li>
-            <li>Kar pridi ¯\_(ツ)_/¯</li>
-          </ol>
-        </p>
-      </div>
-      <p>
-        Teme preteklih srečanj:
-      </p>
-      <ul class="recordings">
-        <li>
-          <a href="https://www.youtube.com/watch?v=nXEQWZlhv-o"
-          ><b>[2024-06-10]</b> Kako so Žanu Mahniču zrasli brki</a>
-        </li>
-        <li>
-          <a href="https://www.youtube.com/watch?v=WunB3sPofKk"
-          ><b>[2024-05-10]</b> Product Engineering s TypeScriptom</a>
-        </li>
-        <li>
-          <a href="https://www.youtube.com/watch?v=A6Sa7KuWiSE"
-          ><b>[2024-04-05]</b> Metaprogramiranje v Rubyju</a>
-        </li>
-        <li><b>[2024-03-01]</b> Parse, don't validate</li>
-        <li><b>[2024-02-02]</b> Delo recruiterja v podjetju Povio</li>
-        <li>
-          <a
-            href="https://www.youtube.com/watch?v=qfFQCz3w5tg"
-          ><b>[2024-01-12]</b> Zakaj bi uporabljal Deno</a>
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/watch?v=Jwa15wNwg2E"
-          ><b>[2023-12-01]</b> Uvod v Kubernetes</a>
-        </li>
-        <li><b>[2023-11-03]</b> Lua in LÖVE na primeru majhne igre</li>
-        <li><b>[2023-10-06]</b> Kako zelo uspešno voditi solo projekt</li>
-      </ul>
+              .:~7?JYY5555YYJ?7~:.</pre>
     </div>
-    <script>
-      const NEXT_MEET_OVERRIDE_DATE = new Date('2024-10-11')
+    <div class="description">
+      <marquee id="next-meet"></marquee>
+      <p>Kozjansko geekališče so redna mesečna srečanja programerjev in drugih
+        IT delavcev iz Kozjanskega in Obsotelja.</p>
+      <p>Že od jeseni 2021 se vsak prvi petek v mesecu ob 19.30 dobimo v
+        <a href="//mladinskislatna.si">MC Slatna</a>, izmenjujemo izkušnje v
+        obliki krajših predavanj in ob pivu debatiramo o službi.
+      </p>
+      <p>Če si zainteresiran_a, imaš tri možnosti:
+      <ol>
+        <li>Pridruži se <a href="https://discord.gg/yqQCrp2Vac">Discord strežniku</a></li>
+        <li>Pošlji <a href="mailto:mato@zgajner.com">email</a></li>
+        <li>Kar pridi ¯\_(ツ)_/¯</li>
+      </ol>
+      </p>
+    </div>
+    <p>
+      Teme preteklih srečanj:
+    </p>
+    <ul class="recordings">
+      <li>
+        <a href="https://www.youtube.com/watch?v=PAptKSlkptc"><b>[2024-10-11]</b> Tailscale za domačo uporabo</a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=r46-RgjfdXU"><b>[2024-08-02]</b> Rana ura, napačen timezone</a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=nXEQWZlhv-o"><b>[2024-06-10]</b> Kako so Žanu Mahniču zrasli brki</a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=WunB3sPofKk"><b>[2024-05-10]</b> Product Engineering s TypeScriptom</a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=A6Sa7KuWiSE"><b>[2024-04-05]</b> Metaprogramiranje v Rubyju</a>
+      </li>
+      <li><b>[2024-03-01]</b> Parse, don't validate</li>
+      <li><b>[2024-02-02]</b> Delo recruiterja v podjetju Povio</li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=qfFQCz3w5tg"><b>[2024-01-12]</b> Zakaj bi uporabljal Deno</a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/watch?v=Jwa15wNwg2E"><b>[2023-12-01]</b> Uvod v Kubernetes</a>
+      </li>
+      <li><b>[2023-11-03]</b> Lua in LÖVE na primeru majhne igre</li>
+      <li><b>[2023-10-06]</b> Kako zelo uspešno voditi solo projekt</li>
+    </ul>
+  </div>
+  <script>
+    const NEXT_MEET_OVERRIDE_DATE = new Date('2024-11-08')
 
-      function findNextFirstFriday() {
-        const date = new Date()
-        const daysToNextFriday = (5 - date.getDay() + 7) % 7
-        date.setDate(date.getDate() + daysToNextFriday)
+    function findNextFirstFriday() {
+      const date = new Date()
+      const daysToNextFriday = (5 - date.getDay() + 7) % 7
+      date.setDate(date.getDate() + daysToNextFriday)
 
-        while (date.getDate() > 7) {
-          date.setDate(date.getDate() + 7)
-        }
-
-        return date
+      while (date.getDate() > 7) {
+        date.setDate(date.getDate() + 7)
       }
 
-      function getNextMeetDate() {
-        let nextMeetDate = findNextFirstFriday()
+      return date
+    }
 
-        if (NEXT_MEET_OVERRIDE_DATE > nextMeetDate) {
-          nextMeetDate = NEXT_MEET_OVERRIDE_DATE
-        }
+    function getNextMeetDate() {
+      let nextMeetDate = findNextFirstFriday()
 
-        return nextMeetDate.toLocaleDateString('sl-SI')
+      if (NEXT_MEET_OVERRIDE_DATE > nextMeetDate) {
+        nextMeetDate = NEXT_MEET_OVERRIDE_DATE
       }
 
-      const nextMeetElement = document.querySelector('#next-meet')
-      nextMeetElement.innerHTML =
-        `Naslednjič se dobimo <b>${getNextMeetDate()}</b> ob <b>19.30</b>!`
-    </script>
-  </body>
+      return nextMeetDate.toLocaleDateString('sl-SI')
+    }
+
+    const nextMeetElement = document.querySelector('#next-meet')
+    nextMeetElement.innerHTML =
+      `Naslednjič se dobimo <b>${getNextMeetDate()}</b> ob <b>19.30</b>!`
+  </script>
+</body>
+
 </html>
